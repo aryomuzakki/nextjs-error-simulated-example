@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { ThemeProvider, useTheme } from "next-themes";
 import { Toaster } from "./ui/sonner";
+import FakeError from "./FakeError";
 
 const WithNextTheme = ({ children }) => {
   const [curTheme, setCurTheme] = useState();
@@ -18,6 +19,7 @@ const WithNextTheme = ({ children }) => {
       defaultTheme="system"
       enableSystem
     >
+      {/* <FakeError condition={true} skipBuild={true} /> */}
       {children}
       <Toaster
         theme={curTheme}

@@ -3,6 +3,7 @@ import "./globals.css";
 import WithNProgress from "@/components/WithNProgress";
 import WithNextTheme from "@/components/WithNextTheme";
 import Footer from "@/components/Layout/Footer";
+import FakeError from "@/components/FakeError";
 
 const pkgVer = process.env.npm_package_version || (await import("@/../package.json")).version;
 
@@ -41,6 +42,7 @@ export default function RootLayout({ children }) {
           <div className="min-h-dvh flex flex-col relative">
             <main className="flex-grow">
               {children}
+              {/* <FakeError condition={true} skipBuild={true} /> */}
             </main>
             <Footer pkgVer={pkgVer} />
           </div>

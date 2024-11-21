@@ -10,6 +10,7 @@ import ColorPicker from "./ColorPicker"
 import { Label } from "./ui/label"
 import { ThemeToggle } from "./ThemeToggle"
 import { toast } from "sonner";
+import FakeError from "./FakeError";
 
 export default function QRGeneratorCard() {
 
@@ -114,6 +115,7 @@ export default function QRGeneratorCard() {
           <div className="flex justify-between items-center">
             <CardTitle className="text-2xl font-bold">QR Code Generator</CardTitle>
             <ThemeToggle />
+            {/* <FakeError condition={true} skipBuild={true} /> */}
           </div>
         </CardHeader>
         <CardContent>

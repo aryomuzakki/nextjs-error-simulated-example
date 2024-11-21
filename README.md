@@ -1,7 +1,28 @@
-# QR Code Generator
+# Next JS Error Simulated Example
 
-- ### Generate QR Code with Color/Shape Styling, and add Logo Icon.
-- ### Scan QR Code with Device Camera
+There are a few ways you could simulate error to test showing error.jsx or `global-error.jsx` page. Some things are needed to note, like hot reload will not work so you need to reload manually 
+
+> You can read [this issue comment](https://github.com/vercel/next.js/issues/46964#issuecomment-1867864465) and [this](https://github.com/vercel/next.js/issues/46964#issuecomment-2338351430)
+
+Use `FakeError.jsx` component in `page.jsx` or components inside the page to **test `error.jsx` at development or production build**.
+
+Use `FakeError.jsx` component in `layout.jsx` or components inside layout to **test `global-error.jsx` at production build**.
+
+To **test `global-error.jsx` in development**, you don't need the component. Follow this steps.
+
+1. Install [React Developer Tools](https://react.dev/learn/react-developer-tools)
+2. Open your browser Developer Tools, and open the new 'Component' tab
+3. Select the component inside 'Error Boundary' component (but not inside HotReload cause it won't work), and click the _exclamation mark_ (!) icon _(as you can see in the screenshot)_
+![gwwYDAHI](https://github.com/user-attachments/assets/98901932-2de7-4c16-99b1-c90b21ad304a)
+
+
+---
+---
+
+## QR Code Generator
+
+- ### Generate QR Code
+- ### Scan QR Code
 
 ---
 
@@ -14,17 +35,6 @@ Generate QR Code
 - [x] Download as SVG
 - [x] Download as PNG
 - [x] Edit Foreground/Dots Color
-- [ ] Edit Corners Frame Color
-- [ ] Edit Corners Eye Color
-- [ ] Edit Dots Shape
-- [ ] Edit Corners Frame Shape
-- [ ] Edit Corners Eye Shape
-- [ ] Add Logo Icon
-- [ ] Edit Logo Size
-- [ ] Edit Logo Margin
-- [ ] Edit QR Margin (Quiet Zone)
-- [ ] Edit Downloaded Size
-- [ ] Edit Error Correction Level
 
 Scan QR Code
 
@@ -32,7 +42,6 @@ Scan QR Code
 - [x] Toggle Flashlight On/Off
 - [x] Copy Result & Open Link in New Tab if Result is a Link
 - [x] Switch Camera Rear or Front
-- [ ] Upload QR from Image File
 
 ---
 

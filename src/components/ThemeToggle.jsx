@@ -11,6 +11,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import FakeError from "./FakeError";
 
 export function ThemeToggle() {
   const [curTheme, setCurTheme] = useState();
@@ -30,6 +31,7 @@ export function ThemeToggle() {
             <SunMoonIcon className={`h-[1.2rem] w-[1.2rem] ${curTheme === "system" ? "block" : "hidden"} `} />
           </>
           <span className="sr-only">Toggle theme</span>
+          {/* <FakeError condition={true} skipBuild={true} /> */}
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
